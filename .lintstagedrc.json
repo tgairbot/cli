@@ -1,0 +1,5 @@
+{
+  "{src,apps,libs,test}/**/*.ts": [],
+  "./**/*.{ts,js,json,*rc}": [],
+  "package.json": ["npx -y sort-package-json"]
+}

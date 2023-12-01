@@ -1,0 +1,13 @@
+src
+node_modules
+.vscode
+.idea
+.husky
+.commitlintrc.json
+.eslintrc.js
+.lintstagedrc.json
+.prettierignore
+.prettierrc
+.swcrc
+tsconfig.json
+yarn-error.log

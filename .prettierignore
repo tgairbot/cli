@@ -1,0 +1,7 @@
+# compiled output
+/dist
+coverage
+.nvmrc
+.idea
+.vscode
+package-lock.json
