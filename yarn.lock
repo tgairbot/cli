@@ -497,10 +497,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tgairbot/schematics@0.0.1-alpha":
-  version "0.0.1-alpha"
-  resolved "https://registry.yarnpkg.com/@tgairbot/schematics/-/schematics-0.0.1-alpha.tgz#8332c45ee6e4ea46875b1f5e7907bd133f54494c"
-  integrity sha512-wi3WfAnqcXcFIx0aW1zFod/E55a+bzRUpYpTrSRyAsLpK0stc+6YJ+0a/JVJmCc6aG2eQEaIvAgghL9ePFqrRw==
+"@tgairbot/schematics@0.0.2-alpha":
+  version "0.0.2-alpha"
+  resolved "https://registry.yarnpkg.com/@tgairbot/schematics/-/schematics-0.0.2-alpha.tgz#77184c817bb95a1dcbe8aa1cb7c86dc64809b014"
+  integrity sha512-hw8s5AsNR40tOtCReWNiGeOsBg4o4a1dfDkWn+IPVRQNOIEWzJXaRKuI4XAbxtN9N9Senp5+h+dTNZjwJZET2w==
   dependencies:
     "@angular-devkit/core" "16.2.8"
     "@angular-devkit/schematics" "16.2.8"

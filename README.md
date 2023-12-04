@@ -14,4 +14,4 @@ $ npm install -g @tgairbot/cli
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+[MIT licensed](LICENSE).
