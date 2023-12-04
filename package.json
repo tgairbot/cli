@@ -1,17 +1,22 @@
 {
   "name": "@tgairbot/cli",
-  "version": "0.0.0-alpha",
+  "version": "0.0.4-alpha",
   "description": "",
   "main": "dist/index.js",
+  "bin": {
+    "tgairbot": "dist/index.js"
+  },
   "keywords": [
     "tgairbot",
     "telegram",
     "telegram bot api",
     "bot",
     "bot api",
-    "bot framework"
+    "bot framework",
+    "cli"
   ],
   "scripts": {
+    "prebuild": "rm -rf node_modules && yarn",
     "build": "rm -rf dist && tsc",
     "precommit": "lint-staged --no-stash && yarn lint",
     "commit": "cz",
@@ -24,7 +29,9 @@
     "prettier": "yarn prettier:check && yarn prettier:write",
     "prettier:check": "prettier --config .prettierrc --check \"./src/**/*.{ts,js,json,*rc}\"",
     "prettier:write": "prettier --config .prettierrc --write \"./src/**/*.{ts,js,json,*rc}\"",
-    "start:dev": "yarn prettier && tsc && node dist/index.js"
+    "start:dev": "yarn prettier && tsc && node dist/index.js",
+    "prepublish:npm": "yarn build",
+    "publish:npm": "npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -37,15 +44,46 @@
   },
   "homepage": "https://github.com/tgairbot/cli#readme",
   "dependencies": {
-
+    "@angular-devkit/core": "16.2.8",
+    "@angular-devkit/schematics": "16.2.8",
+    "@angular-devkit/schematics-cli": "16.2.8",
+    "@tgairbot/schematics": "0.0.1-alpha",
+    "chalk": "4.1.2",
+    "chokidar": "3.5.3",
+    "cli-table3": "0.6.3",
+    "commander": "4.1.1",
+    "fork-ts-checker-webpack-plugin": "9.0.2",
+    "glob": "10.3.10",
+    "inquirer": "8.2.6",
+    "node-emoji": "1.11.0",
+    "ora": "5.4.1",
+    "os-name": "4.0.1",
+    "rimraf": "4.4.1",
+    "shelljs": "0.8.5",
+    "source-map-support": "0.5.21",
+    "tree-kill": "1.2.2",
+    "tsconfig-paths": "4.2.0",
+    "tsconfig-paths-webpack-plugin": "4.1.0",
+    "typescript": "5.2.2",
+    "webpack": "5.89.0",
+    "webpack-node-externals": "3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@swc/cli": "^0.1.62",
     "@swc/core": "^1.3.83",
-    "@types/form-data": "^2.5.0",
+    "@types/chalk": "^2.2.0",
+    "@types/chokidar": "^2.1.3",
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "9.0.3",
     "@types/node": "^20.3.1",
+    "@types/node-emoji": "1.8.2",
+    "@types/ora": "^3.2.0",
+    "@types/os-name": "^3.1.0",
+    "@types/shelljs": "0.8.15",
+    "@types/webpack": "^5.28.5",
+    "@types/webpack-node-externals": "^3.0.4",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
